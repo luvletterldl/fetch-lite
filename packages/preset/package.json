@@ -1,7 +1,7 @@
 {
   "name": "@fetch-lite/preset",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "fetch-lite preset module",
   "author": "luvletterldl",
   "homepage": "https://github.com/luvletterldl/fetch-lite#readme",
