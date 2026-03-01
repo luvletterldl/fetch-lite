@@ -1,0 +1,47 @@
+{
+  "name": "@fetch-lite/preset",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "fetch-lite preset module",
+  "author": "luvletterldl",
+  "homepage": "https://github.com/luvletterldl/fetch-lite#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luvletterldl/fetch-lite.git",
+    "directory": "packages/preset"
+  },
+  "bugs": {
+    "url": "https://github.com/luvletterldl/fetch-lite/issues"
+  },
+  "keywords": [
+    "fetch-lite",
+    "fetch",
+    "preset"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "@fetch-lite/base": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:"
+  }
+}

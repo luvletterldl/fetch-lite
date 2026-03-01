@@ -1,0 +1,62 @@
+{
+  "name": "@fetch-lite/monorepo",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "author": "luvletterldl",
+  "license": "ISC",
+  "keywords": [
+    "request lib",
+    "fetch"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "format": "eslint . --fix",
+    "test": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "build": "rimraf packages/*/dist && pnpm -r build",
+    "build:base": "cd packages/base && rimraf dist && pnpm build",
+    "build:": "cd packages/base && rimraf dist && pnpm build",
+    "dev:docs": "cd packages/docs && rimraf dist && pnpm d",
+    "bd": "cd packages/docs && rimraf dist && pnpm b",
+    "build:fetch": "cd packages/fetch && rimraf dist && pnpm build",
+    "build:standard": "cd packages/preset && rimraf dist && pnpm build",
+    "prebuild": "pnpm lint && pnpm typecheck",
+    "pb": "pnpm lint && pnpm typecheck",
+    "clean": "rimraf packages/*/dist",
+    "release": "bumpp -r",
+    "clog": "changelogen --output ./packages/docs/src/releases.md",
+    "up": "taze major -I -r",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "catalog:",
+    "@fetch-lite/base": "workspace:*",
+    "@fetch-lite/preset": "workspace:*",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@vitest/ui": "catalog:",
+    "bumpp": "catalog:",
+    "changelogen": "catalog:",
+    "eslint": "catalog:",
+    "jsdom": "catalog:",
+    "lint-staged": "catalog:",
+    "pnpm": "catalog:",
+    "pre-commit": "catalog:",
+    "rimraf": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "taze": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitepress": "catalog:",
+    "vitest": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

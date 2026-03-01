@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+.temp
+*.log
+dist
+node_modules
+packages/**/node_modules
+packages/**/dist
+packages/**/coverage
+packages/**/cache
+coverage

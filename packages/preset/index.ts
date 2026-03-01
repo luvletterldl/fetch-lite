@@ -1,0 +1,1 @@
+export { createStandardFetch } from './src'

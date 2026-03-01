@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "rootDir": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "@fetch-lite": [
+        "./packages/fetch/index.ts"
+      ],
+      "@fetch-lite/base": [
+        "./packages/base/index.ts"
+      ],
+      "@fetch-lite/base*": [
+        "./packages/base/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "vitest/globals"
+    ],
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "declarationDir": "./types",
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "packages"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/**/*.md",
+    "**/dist",
+    "**/**/*.config.ts"
+  ]
+}

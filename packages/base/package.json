@@ -1,0 +1,42 @@
+{
+  "name": "@fetch-lite/base",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "fetch-lite base module",
+  "author": "luvletterldl",
+  "homepage": "https://github.com/luvletterldl/fetch-lite#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luvletterldl/fetch-lite.git",
+    "directory": "packages/base"
+  },
+  "bugs": {
+    "url": "https://github.com/luvletterldl/fetch-lite/issues"
+  },
+  "keywords": [
+    "fetch-lite"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsdown"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:"
+  }
+}
